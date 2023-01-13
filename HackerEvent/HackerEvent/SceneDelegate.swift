@@ -14,7 +14,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var appDependencies = AppDependencies.shared
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         appDependencies.setScene(scene)
-        appDependencies.setRootViewController(appDependencies.makeHomeViewController())
+        appDependencies.start()
+//        appDependencies.setRootViewController(appDependencies.makeHomeViewController())
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 

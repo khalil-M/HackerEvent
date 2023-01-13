@@ -10,12 +10,14 @@
 		8245A0422971A8A4007DAC04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245A0412971A8A4007DAC04 /* AppDelegate.swift */; };
 		8245A0442971A8A4007DAC04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245A0432971A8A4007DAC04 /* SceneDelegate.swift */; };
 		8245A0462971A8A4007DAC04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245A0452971A8A4007DAC04 /* ViewController.swift */; };
-		8245A0492971A8A4007DAC04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8245A0472971A8A4007DAC04 /* Main.storyboard */; };
 		8245A04B2971A8A5007DAC04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8245A04A2971A8A5007DAC04 /* Assets.xcassets */; };
 		8245A04E2971A8A5007DAC04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8245A04C2971A8A5007DAC04 /* LaunchScreen.storyboard */; };
 		8245A0592971A8A6007DAC04 /* HackerEventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245A0582971A8A6007DAC04 /* HackerEventTests.swift */; };
 		8245A0632971A8A6007DAC04 /* HackerEventUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245A0622971A8A6007DAC04 /* HackerEventUITests.swift */; };
 		8245A0652971A8A6007DAC04 /* HackerEventUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245A0642971A8A6007DAC04 /* HackerEventUITestsLaunchTests.swift */; };
+		82C31DEA2971ACBD0049B116 /* Appdependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C31DE92971ACBD0049B116 /* Appdependencies.swift */; };
+		82C31DED2971AD270049B116 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C31DEB2971AD270049B116 /* HomeViewController.swift */; };
+		82C31DEE2971AD270049B116 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82C31DEC2971AD270049B116 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,6 @@
 		8245A0412971A8A4007DAC04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8245A0432971A8A4007DAC04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8245A0452971A8A4007DAC04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8245A0482971A8A4007DAC04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8245A04A2971A8A5007DAC04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8245A04D2971A8A5007DAC04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8245A04F2971A8A5007DAC04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		8245A05E2971A8A6007DAC04 /* HackerEventUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackerEventUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8245A0622971A8A6007DAC04 /* HackerEventUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerEventUITests.swift; sourceTree = "<group>"; };
 		8245A0642971A8A6007DAC04 /* HackerEventUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerEventUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		82C31DE92971ACBD0049B116 /* Appdependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appdependencies.swift; sourceTree = "<group>"; };
+		82C31DEB2971AD270049B116 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		82C31DEC2971AD270049B116 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +105,10 @@
 			children = (
 				8245A0412971A8A4007DAC04 /* AppDelegate.swift */,
 				8245A0432971A8A4007DAC04 /* SceneDelegate.swift */,
+				82C31DE92971ACBD0049B116 /* Appdependencies.swift */,
+				82C31DEB2971AD270049B116 /* HomeViewController.swift */,
+				82C31DEC2971AD270049B116 /* HomeViewController.xib */,
 				8245A0452971A8A4007DAC04 /* ViewController.swift */,
-				8245A0472971A8A4007DAC04 /* Main.storyboard */,
 				8245A04A2971A8A5007DAC04 /* Assets.xcassets */,
 				8245A04C2971A8A5007DAC04 /* LaunchScreen.storyboard */,
 				8245A04F2971A8A5007DAC04 /* Info.plist */,
@@ -233,7 +239,7 @@
 			files = (
 				8245A04E2971A8A5007DAC04 /* LaunchScreen.storyboard in Resources */,
 				8245A04B2971A8A5007DAC04 /* Assets.xcassets in Resources */,
-				8245A0492971A8A4007DAC04 /* Main.storyboard in Resources */,
+				82C31DEE2971AD270049B116 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82C31DED2971AD270049B116 /* HomeViewController.swift in Sources */,
+				82C31DEA2971ACBD0049B116 /* Appdependencies.swift in Sources */,
 				8245A0462971A8A4007DAC04 /* ViewController.swift in Sources */,
 				8245A0422971A8A4007DAC04 /* AppDelegate.swift in Sources */,
 				8245A0442971A8A4007DAC04 /* SceneDelegate.swift in Sources */,
@@ -297,14 +305,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8245A0472971A8A4007DAC04 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8245A0482971A8A4007DAC04 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8245A04C2971A8A5007DAC04 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +442,7 @@
 				INFOPLIST_FILE = HackerEvent/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +470,7 @@
 				INFOPLIST_FILE = HackerEvent/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
