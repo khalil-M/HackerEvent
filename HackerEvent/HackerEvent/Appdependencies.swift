@@ -13,9 +13,19 @@ class AppDependencies {
     private init(){
         
     }
-//    private lazy var service: AppServiceProtocol = {
-//        return AppService()
-//    }()
+    
+    private lazy var client: HTTPClient = {
+        return URLSessionHTTPClient(session: URLSession.shared)
+    }()
+    
+    private lazy var service: EventApiServiceProtocol = {
+        return EventApiService(baseURL: URL(string:"https://kontests.net/api/v1")!, client: client)
+    }()
+    
+    private lazy var eventManager: EventManagerProtocol = {
+        return EventManager(service: service)
+    }()
+    
     static let shared = AppDependencies()
     
     public func setScene(_ scene: UIScene) {
@@ -26,15 +36,50 @@ class AppDependencies {
         window?.makeKeyAndVisible()
     }
     
+    // MARK: - Tab Bar Controller
+    
+    public func start() {
+        
+        let isLoggedIn:Bool = true
+        
+        if isLoggedIn {
+            setRootViewController(makeMainTabBarController())
+        } else {
+//            setRootViewController(LoginViewController())
+        }
+
+    }
+    
+    private func makeMainTabBarController() -> UIViewController {
+        
+        let eventsVC = makeEventListViewController()
+        let savedEventsVC = makeSavedViewController()
+        let tabController = MainTabBarController(
+            viewControllers: [eventsVC, savedEventsVC])
+        return tabController
+    }
+    
     public func setRootViewController(_ viewController: UIViewController) {
         window?.rootViewController = viewController
     }
     
-    func makeHomeViewController() -> UIViewController {
-        let viewController = HomeViewController()
+    func makeEventListViewController() -> UIViewController {
+        let viewModel = EventListViewControllerViewModel(manager: eventManager)
+        let viewController = EventListViewController(viewModel: viewModel)
         let navigationController = UINavigationController(rootViewController: viewController)
-        navigationController.title = "Home"
-        navigationController.tabBarItem.image = UIImage(systemName: "house")
+        navigationController.title = "All events"
+        navigationController.tabBarItem.image = UIImage(named: "AllEvents")
+        navigationController.tabBarController?.tabBar.tintColor = .red
+        return navigationController
+    }
+    
+    func makeSavedViewController() -> UIViewController {
+        let viewModel = EventListViewControllerViewModel(manager: eventManager)
+        let viewController = EventListViewController(viewModel: viewModel)
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.title = "saved events"
+        navigationController.tabBarItem.image = UIImage(named: "SavedEvents")
+        navigationController.tabBarController?.tabBar.tintColor = .red
         return navigationController
     }
 
