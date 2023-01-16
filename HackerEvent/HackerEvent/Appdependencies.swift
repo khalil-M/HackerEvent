@@ -56,6 +56,7 @@ class AppDependencies {
         let savedEventsVC = makeSavedViewController()
         let tabController = MainTabBarController(
             viewControllers: [eventsVC, savedEventsVC])
+//        tabController.tabBar.barTintColor = UIColor(red: 0.33, green: 0.00, blue: 0.92, alpha: 1.00)
         return tabController
     }
     
@@ -65,21 +66,31 @@ class AppDependencies {
     
     func makeEventListViewController() -> UIViewController {
         let viewModel = EventListViewControllerViewModel(manager: eventManager)
-        let viewController = EventListViewController(viewModel: viewModel)
+        let router = EventListRouter()
+        let viewController = EventListViewController(viewModel: viewModel, router: router)
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.title = "All events"
         navigationController.tabBarItem.image = UIImage(named: "AllEvents")
         navigationController.tabBarController?.tabBar.tintColor = .red
+        router.navigationController = navigationController
         return navigationController
     }
     
     func makeSavedViewController() -> UIViewController {
         let viewModel = EventListViewControllerViewModel(manager: eventManager)
-        let viewController = EventListViewController(viewModel: viewModel)
+        let router = EventListRouter()
+        let viewController = EventListViewController(viewModel: viewModel, router: router)
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.title = "saved events"
         navigationController.tabBarItem.image = UIImage(named: "SavedEvents")
         navigationController.tabBarController?.tabBar.tintColor = .red
+        router.navigationController = navigationController
+        return navigationController
+    }
+    
+    func makeDetailEventViewController() -> UIViewController {
+        let viewController = EventDetailViewController()
+        let navigationController = UINavigationController(rootViewController: viewController)
         return navigationController
     }
 

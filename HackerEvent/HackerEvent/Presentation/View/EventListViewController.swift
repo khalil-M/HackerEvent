@@ -12,9 +12,11 @@ class EventListViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
     let viewModel: EventListViewControllerViewModel
+    let router: EventListRouting
     
-    init(viewModel: EventListViewControllerViewModel) {
+    init(viewModel: EventListViewControllerViewModel, router: EventListRouting) {
         self.viewModel = viewModel
+        self.router = router
         super.init(nibName: "EventListViewController", bundle: nil)
     }
     
@@ -38,8 +40,8 @@ class EventListViewController: UIViewController {
     private func registerCell() {
         tableView.register(UINib(nibName: "EventCellTableViewCell", bundle: Bundle(for: self.classForCoder)), forCellReuseIdentifier: "EventCellTableViewCell")
     }
-
-
+    
+    
 }
 
 extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -56,5 +58,10 @@ extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let event = viewModel.getEventForIndexPath(indexPath: indexPath)
+        router.routeToEventDetails(for: event)
+    }
     
 }
