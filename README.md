@@ -1,2 +1,2 @@
 # HackerEvent
-Application about clean architecture and MVVM design pattern
+HackerEvent: dedicated for showing the list of hacker's events 
