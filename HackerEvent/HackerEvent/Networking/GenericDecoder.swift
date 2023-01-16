@@ -36,8 +36,6 @@ public class GenericDecoder {
         
         if let data = result.data {
             let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            
             do { 
                 let jsonStr = String(decoding: data, as: UTF8.self)
                 print(jsonStr)
