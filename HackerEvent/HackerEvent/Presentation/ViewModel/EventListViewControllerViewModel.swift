@@ -33,6 +33,10 @@ class EventListViewControllerViewModel {
         return cells[indexPath.row]
     }
     
+    func getEventForIndexPath(indexPath: IndexPath) -> Event {
+        return allEvents[indexPath.row]
+    }
+    
     
     public func getData() {
         manager.getAllEvents { [weak self] result in
