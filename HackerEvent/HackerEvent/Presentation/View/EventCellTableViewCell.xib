@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcW-TX-D8d">
-                        <rect key="frame" x="20" y="15" width="293" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
+                        <rect key="frame" x="20" y="15" width="223" height="18"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="textColor" red="0.039215686274509803" green="0.074509803921568626" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" systemColor="systemIndigoColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="txD-Up-tK1">
                         <rect key="frame" x="20" y="48" width="83.666666666666671" height="17"/>
@@ -39,14 +40,32 @@
                             </label>
                         </subviews>
                     </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NextButton" translatesAutoresizingMaskIntoConstraints="NO" id="1hA-LU-mcX">
+                        <rect key="frame" x="283" y="21.666666666666671" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="ir3-pY-T8w"/>
+                            <constraint firstAttribute="height" constant="40" id="kSF-8i-bFY"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreenDot" translatesAutoresizingMaskIntoConstraints="NO" id="5gQ-en-y0a">
+                        <rect key="frame" x="263" y="17" width="10" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="Fz7-1D-YM4"/>
+                            <constraint firstAttribute="height" constant="10" id="x6C-Lj-teh"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="QcW-TX-D8d" secondAttribute="trailing" constant="20" id="5gU-hP-eG2"/>
+                    <constraint firstItem="5gQ-en-y0a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="06h-Yx-mFz"/>
+                    <constraint firstAttribute="trailing" secondItem="QcW-TX-D8d" secondAttribute="trailing" constant="90" id="5gU-hP-eG2"/>
                     <constraint firstItem="txD-Up-tK1" firstAttribute="top" secondItem="QcW-TX-D8d" secondAttribute="bottom" constant="15" id="Tch-ia-f8U"/>
                     <constraint firstAttribute="bottom" secondItem="txD-Up-tK1" secondAttribute="bottom" constant="18" id="USO-un-uRS"/>
+                    <constraint firstItem="1hA-LU-mcX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aha-ZN-Mv7"/>
                     <constraint firstItem="txD-Up-tK1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="gqO-Lq-N7v"/>
                     <constraint firstItem="QcW-TX-D8d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="njL-kI-1QC"/>
+                    <constraint firstItem="1hA-LU-mcX" firstAttribute="leading" secondItem="5gQ-en-y0a" secondAttribute="trailing" constant="10" id="qcw-c5-wmA"/>
                     <constraint firstItem="QcW-TX-D8d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="vKB-GE-INg"/>
+                    <constraint firstAttribute="trailing" secondItem="1hA-LU-mcX" secondAttribute="trailing" constant="10" id="vUh-MF-gdv"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -54,8 +73,16 @@
                 <outlet property="endTimeLabel" destination="mtn-Wc-vOo" id="0V3-hx-gRQ"/>
                 <outlet property="eventNameLabel" destination="QcW-TX-D8d" id="X7k-j6-NOs"/>
                 <outlet property="startTimeLabel" destination="Vr4-3B-B88" id="8MK-kG-keD"/>
+                <outlet property="statusImage" destination="5gQ-en-y0a" id="sDF-R7-pyj"/>
             </connections>
             <point key="canvasLocation" x="-176.33587786259542" y="-24.295774647887324"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="GreenDot" width="11" height="11"/>
+        <image name="NextButton" width="54" height="54"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

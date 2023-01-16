@@ -13,6 +13,7 @@ class EventCellTableViewCell: UITableViewCell, CellProtocol {
     @IBOutlet var eventNameLabel: UILabel!
     @IBOutlet var startTimeLabel: UILabel!
     @IBOutlet var endTimeLabel: UILabel!
+    @IBOutlet var statusImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +30,11 @@ class EventCellTableViewCell: UITableViewCell, CellProtocol {
         guard let viewModel = viewModel as? EventCellViewModel else { return }
         let startDate = viewModel.getDate(date: viewModel.start_time)
         let endDate = viewModel.getDate(date: viewModel.end_time)
+        if viewModel.status == "CODING" {
+            statusImage.image = UIImage(named: "GreenDot")
+        } else {
+            statusImage.image = UIImage(named: "GreyDot")
+        }
         eventNameLabel.text = viewModel.name
         startTimeLabel.text = "From \(startDate)"
         endTimeLabel.text = "to \(endDate)"
