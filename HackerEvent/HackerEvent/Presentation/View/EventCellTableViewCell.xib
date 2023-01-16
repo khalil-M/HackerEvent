@@ -22,28 +22,31 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vr4-3B-B88">
-                        <rect key="frame" x="20.000000000000004" y="48" width="35.333333333333343" height="24"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" red="0.31372549019607843" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtn-Wc-vOo">
-                        <rect key="frame" x="277.66666666666669" y="55" width="35.333333333333314" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" red="0.31372549019607843" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="txD-Up-tK1">
+                        <rect key="frame" x="20" y="48" width="83.666666666666671" height="17"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vr4-3B-B88">
+                                <rect key="frame" x="0.0" y="0.0" width="35.333333333333336" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.31372549019607843" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtn-Wc-vOo">
+                                <rect key="frame" x="48.333333333333329" y="0.0" width="35.333333333333329" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.31372549019607843" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="QcW-TX-D8d" secondAttribute="trailing" constant="20" id="5gU-hP-eG2"/>
-                    <constraint firstItem="Vr4-3B-B88" firstAttribute="top" secondItem="QcW-TX-D8d" secondAttribute="bottom" constant="15" id="6da-o9-T6Z"/>
-                    <constraint firstAttribute="trailing" secondItem="mtn-Wc-vOo" secondAttribute="trailing" constant="20" symbolic="YES" id="6jf-te-7im"/>
-                    <constraint firstAttribute="bottom" secondItem="mtn-Wc-vOo" secondAttribute="bottom" constant="11" id="e6U-jJ-Tg5"/>
-                    <constraint firstItem="Vr4-3B-B88" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="jsi-r7-gWh"/>
+                    <constraint firstItem="txD-Up-tK1" firstAttribute="top" secondItem="QcW-TX-D8d" secondAttribute="bottom" constant="15" id="Tch-ia-f8U"/>
+                    <constraint firstAttribute="bottom" secondItem="txD-Up-tK1" secondAttribute="bottom" constant="18" id="USO-un-uRS"/>
+                    <constraint firstItem="txD-Up-tK1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="gqO-Lq-N7v"/>
                     <constraint firstItem="QcW-TX-D8d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="njL-kI-1QC"/>
                     <constraint firstItem="QcW-TX-D8d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="vKB-GE-INg"/>
-                    <constraint firstAttribute="bottom" secondItem="Vr4-3B-B88" secondAttribute="bottom" constant="11" id="wtk-TB-FWE"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

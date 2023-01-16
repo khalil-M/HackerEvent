@@ -19,15 +19,12 @@ struct EventCellViewModel : CellViewProtocol {
     public var in_24_hours:              String
     public var status:                   String
     
-//    func formatterDate(isoDate: String) {
-//        isoDate = "2016-04-14T10:44:00+0000"
-//
-//          let dateFormatter = DateFormatter()
-//          dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
-//          dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-//          let date = dateFormatter.date(from:isoDate)!
-//
-//
-//    }
-  
+    func getDate(date: String) -> String {
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        let result = dateFormatter.string(from: date)
+        return result
+    }
+    
 }

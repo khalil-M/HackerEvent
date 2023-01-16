@@ -27,9 +27,11 @@ class EventCellTableViewCell: UITableViewCell, CellProtocol {
     
     func configure(with viewModel: CellViewProtocol) {
         guard let viewModel = viewModel as? EventCellViewModel else { return }
+        let startDate = viewModel.getDate(date: viewModel.start_time)
+        let endDate = viewModel.getDate(date: viewModel.end_time)
         eventNameLabel.text = viewModel.name
-        startTimeLabel.text = "From \(viewModel.start_time)"
-        endTimeLabel.text = "to \(viewModel.end_time)"
+        startTimeLabel.text = "From \(startDate)"
+        endTimeLabel.text = "to \(endDate)"
     }
     
 }
