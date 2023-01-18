@@ -22,6 +22,10 @@
 		82C31DF42971B72D0049B116 /* EventListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82C31DF22971B72D0049B116 /* EventListViewController.xib */; };
 		82CB986729755E89009FA468 /* EventCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CB986529755E89009FA468 /* EventCellTableViewCell.swift */; };
 		82CB986829755E89009FA468 /* EventCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82CB986629755E89009FA468 /* EventCellTableViewCell.xib */; };
+		82CB986A29759718009FA468 /* Rooting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CB986929759718009FA468 /* Rooting.swift */; };
+		82CB986D2975981D009FA468 /* EventListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CB986C2975981D009FA468 /* EventListRouter.swift */; };
+		82CB987029759905009FA468 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CB986E29759905009FA468 /* EventDetailViewController.swift */; };
+		82CB987129759905009FA468 /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82CB986F29759905009FA468 /* EventDetailViewController.xib */; };
 		82D269932972BDDF00DB8F08 /* GenericDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D2698F2972BDDF00DB8F08 /* GenericDecoder.swift */; };
 		82D269942972BDDF00DB8F08 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D269902972BDDF00DB8F08 /* URLSessionHTTPClient.swift */; };
 		82D269952972BDDF00DB8F08 /* NetworkingServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D269912972BDDF00DB8F08 /* NetworkingServiceError.swift */; };
@@ -71,6 +75,10 @@
 		82C31DF22971B72D0049B116 /* EventListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventListViewController.xib; sourceTree = "<group>"; };
 		82CB986529755E89009FA468 /* EventCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellTableViewCell.swift; sourceTree = "<group>"; };
 		82CB986629755E89009FA468 /* EventCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCellTableViewCell.xib; sourceTree = "<group>"; };
+		82CB986929759718009FA468 /* Rooting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooting.swift; sourceTree = "<group>"; };
+		82CB986C2975981D009FA468 /* EventListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListRouter.swift; sourceTree = "<group>"; };
+		82CB986E29759905009FA468 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		82CB986F29759905009FA468 /* EventDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
 		82D2698F2972BDDF00DB8F08 /* GenericDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDecoder.swift; sourceTree = "<group>"; };
 		82D269902972BDDF00DB8F08 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		82D269912972BDDF00DB8F08 /* NetworkingServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingServiceError.swift; sourceTree = "<group>"; };
@@ -130,6 +138,8 @@
 			children = (
 				82C31DF22971B72D0049B116 /* EventListViewController.xib */,
 				82C31DF12971B72D0049B116 /* EventListViewController.swift */,
+				82CB986E29759905009FA468 /* EventDetailViewController.swift */,
+				82CB986F29759905009FA468 /* EventDetailViewController.xib */,
 				8230A58C297556DC0007C390 /* EventCellViewModel.swift */,
 				82CB986529755E89009FA468 /* EventCellTableViewCell.swift */,
 				82CB986629755E89009FA468 /* EventCellTableViewCell.xib */,
@@ -157,9 +167,9 @@
 		8230A58529754F0F0007C390 /* Business */ = {
 			isa = PBXGroup;
 			children = (
-				8230A58029754E510007C390 /* Model */,
 				82D49B912973F88700AEA17B /* EventApiServiceProtocol.swift */,
 				82D49B952973FD1600AEA17B /* EventManagerProtocol.swift */,
+				8230A58029754E510007C390 /* Model */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -190,6 +200,7 @@
 				8245A0412971A8A4007DAC04 /* AppDelegate.swift */,
 				8245A0432971A8A4007DAC04 /* SceneDelegate.swift */,
 				8230A586297555EA0007C390 /* AbstractCell.swift */,
+				82CB986B29759720009FA468 /* Routing */,
 				82D2699E2972C45100DB8F08 /* CompositionRoot */,
 				8230A58129754E8E0007C390 /* Data */,
 				8230A58529754F0F0007C390 /* Business */,
@@ -217,6 +228,15 @@
 				8245A0642971A8A6007DAC04 /* HackerEventUITestsLaunchTests.swift */,
 			);
 			path = HackerEventUITests;
+			sourceTree = "<group>";
+		};
+		82CB986B29759720009FA468 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				82CB986929759718009FA468 /* Rooting.swift */,
+				82CB986C2975981D009FA468 /* EventListRouter.swift */,
+			);
+			path = Routing;
 			sourceTree = "<group>";
 		};
 		82D269972972BDED00DB8F08 /* Networking */ = {
@@ -343,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82CB987129759905009FA468 /* EventDetailViewController.xib in Resources */,
 				82CB986829755E89009FA468 /* EventCellTableViewCell.xib in Resources */,
 				82C31DF42971B72D0049B116 /* EventListViewController.xib in Resources */,
 				8245A04E2971A8A5007DAC04 /* LaunchScreen.storyboard in Resources */,
@@ -379,12 +400,15 @@
 				82D269952972BDDF00DB8F08 /* NetworkingServiceError.swift in Sources */,
 				82C31DEA2971ACBD0049B116 /* Appdependencies.swift in Sources */,
 				82D49B942973F97300AEA17B /* AllEvents.swift in Sources */,
+				82CB986A29759718009FA468 /* Rooting.swift in Sources */,
 				82CB986729755E89009FA468 /* EventCellTableViewCell.swift in Sources */,
 				82C31DF02971AE870049B116 /* MainTabBarController.swift in Sources */,
 				82D49B902973F80D00AEA17B /* EventListViewControllerViewModel.swift in Sources */,
+				82CB987029759905009FA468 /* EventDetailViewController.swift in Sources */,
 				82D49B962973FD1600AEA17B /* EventManagerProtocol.swift in Sources */,
 				82D269962972BDDF00DB8F08 /* HTTPClient.swift in Sources */,
 				8230A58D297556DC0007C390 /* EventCellViewModel.swift in Sources */,
+				82CB986D2975981D009FA468 /* EventListRouter.swift in Sources */,
 				8245A0422971A8A4007DAC04 /* AppDelegate.swift in Sources */,
 				82D269932972BDDF00DB8F08 /* GenericDecoder.swift in Sources */,
 				8245A0442971A8A4007DAC04 /* SceneDelegate.swift in Sources */,

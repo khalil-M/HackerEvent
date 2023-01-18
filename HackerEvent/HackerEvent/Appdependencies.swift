@@ -45,7 +45,7 @@ class AppDependencies {
         if isLoggedIn {
             setRootViewController(makeMainTabBarController())
         } else {
-//            setRootViewController(LoginViewController())
+//            setRootViewController()
         }
 
     }
