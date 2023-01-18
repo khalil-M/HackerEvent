@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class MainTabBarController: UITabBarController {
+class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     required public init(viewControllers: [UIViewController]) {
         super.init(nibName: nil, bundle: nil)
@@ -22,6 +22,16 @@ class MainTabBarController: UITabBarController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+    }
+    
+    // UITabBarDelegate
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        print("Selected item")
+    }
+
+    // UITabBarControllerDelegate
+    func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
+        print("Selected view controller")
     }
 
 
