@@ -1,0 +1,24 @@
+name: iOS CI
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  XCODE_PROJECT: HackerEvent.xcodeproj
+  XCODE_SCHEME: HackerEvent
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build and test
+      run: |
+        xcodebuild clean build test \
+          -project "$XCODE_PROJECT" \
+          -scheme "$XCODE_SCHEME"
