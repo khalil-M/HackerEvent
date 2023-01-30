@@ -11,12 +11,7 @@ env:
 
 jobs:
   test:
-    uses: sersoft-gmbh/xcodebuild-action@v2
-    with:
-    project: MyApp.xcodeproj
-    scheme: MyApp
-    destination: platform=macOS
-    action: test
+    runs-on: macos-11
     steps:
       - uses: actions/checkout@v2
 
