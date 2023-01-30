@@ -17,8 +17,4 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Build and test
-      run: |
-        xcodebuild clean build test \
-          -project "$XCODE_PROJECT" \
-          -scheme "$XCODE_SCHEME"
+
