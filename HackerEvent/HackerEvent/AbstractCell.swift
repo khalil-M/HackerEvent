@@ -14,6 +14,7 @@ public protocol CellViewProtocol {
 
 protocol CellProtocol {
     func configure(with viewModel: CellViewProtocol)
+    func testBuildOnCi()
 }
 
 public enum CellType: String, CaseIterable {
