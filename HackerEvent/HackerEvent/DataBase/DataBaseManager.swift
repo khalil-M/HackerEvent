@@ -21,6 +21,21 @@ extension DataManagerProtocol {
 class DataManager {
     static let shared: DataManagerProtocol = DataManager()
     var dbService: CoreDataService = CoreDataService.shared
+    
+    private var events = [Event]()
+    
+    private func addToEntity(for event: Event) {
+        let entity = EventEntity.entity()
+        let newEvent = EventEntity(entity: entity, insertInto: dbService.context)
+        newEvent.name = event.name
+        newEvent.url = event.url
+        newEvent.startTime = event.start_time
+        newEvent.endTime = event.end_time
+        newEvent.duration = event.duration
+        newEvent.site = event.site
+        newEvent.in_24_hours = event.in_24_hours
+        newEvent.status = event.status
+    }
 }
 
 
