@@ -16,6 +16,13 @@
 		8245A0592971A8A6007DAC04 /* HackerEventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245A0582971A8A6007DAC04 /* HackerEventTests.swift */; };
 		8245A0632971A8A6007DAC04 /* HackerEventUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245A0622971A8A6007DAC04 /* HackerEventUITests.swift */; };
 		8245A0652971A8A6007DAC04 /* HackerEventUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245A0642971A8A6007DAC04 /* HackerEventUITestsLaunchTests.swift */; };
+		82B66B0E29964513002AD30F /* EventDetailViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B66B0D29964513002AD30F /* EventDetailViewControllerViewModel.swift */; };
+		82B66B1429964C62002AD30F /* EventModelDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82B66B1229964C62002AD30F /* EventModelDB.xcdatamodeld */; };
+		82B66B1729964FED002AD30F /* EventEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B66B1529964FED002AD30F /* EventEntity+CoreDataClass.swift */; };
+		82B66B1829964FED002AD30F /* EventEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B66B1629964FED002AD30F /* EventEntity+CoreDataProperties.swift */; };
+		82B66B1B299652E1002AD30F /* DBServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B66B1A299652E1002AD30F /* DBServiceProtocol.swift */; };
+		82B66B1D299653D2002AD30F /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B66B1C299653D2002AD30F /* CoreDataService.swift */; };
+		82B66B1F299656CC002AD30F /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B66B1E299656CC002AD30F /* DataBaseManager.swift */; };
 		82C31DEA2971ACBD0049B116 /* Appdependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C31DE92971ACBD0049B116 /* Appdependencies.swift */; };
 		82C31DF02971AE870049B116 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C31DEF2971AE870049B116 /* MainTabBarController.swift */; };
 		82C31DF32971B72D0049B116 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C31DF12971B72D0049B116 /* EventListViewController.swift */; };
@@ -69,6 +76,13 @@
 		8245A05E2971A8A6007DAC04 /* HackerEventUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackerEventUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8245A0622971A8A6007DAC04 /* HackerEventUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerEventUITests.swift; sourceTree = "<group>"; };
 		8245A0642971A8A6007DAC04 /* HackerEventUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerEventUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		82B66B0D29964513002AD30F /* EventDetailViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewControllerViewModel.swift; sourceTree = "<group>"; };
+		82B66B1329964C62002AD30F /* EventModelDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventModelDB.xcdatamodel; sourceTree = "<group>"; };
+		82B66B1529964FED002AD30F /* EventEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		82B66B1629964FED002AD30F /* EventEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		82B66B1A299652E1002AD30F /* DBServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBServiceProtocol.swift; sourceTree = "<group>"; };
+		82B66B1C299653D2002AD30F /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		82B66B1E299656CC002AD30F /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		82C31DE92971ACBD0049B116 /* Appdependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appdependencies.swift; sourceTree = "<group>"; };
 		82C31DEF2971AE870049B116 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		82C31DF12971B72D0049B116 /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +153,7 @@
 				82C31DF22971B72D0049B116 /* EventListViewController.xib */,
 				82C31DF12971B72D0049B116 /* EventListViewController.swift */,
 				82CB986E29759905009FA468 /* EventDetailViewController.swift */,
+				82B66B0D29964513002AD30F /* EventDetailViewControllerViewModel.swift */,
 				82CB986F29759905009FA468 /* EventDetailViewController.xib */,
 				8230A58C297556DC0007C390 /* EventCellViewModel.swift */,
 				82CB986529755E89009FA468 /* EventCellTableViewCell.swift */,
@@ -199,6 +214,9 @@
 			children = (
 				8245A0412971A8A4007DAC04 /* AppDelegate.swift */,
 				8245A0432971A8A4007DAC04 /* SceneDelegate.swift */,
+				82B66B1929965285002AD30F /* CoreData */,
+				82B66B1A299652E1002AD30F /* DBServiceProtocol.swift */,
+				82B66B20299656D2002AD30F /* DataBase */,
 				8230A586297555EA0007C390 /* AbstractCell.swift */,
 				82CB986B29759720009FA468 /* Routing */,
 				82D2699E2972C45100DB8F08 /* CompositionRoot */,
@@ -228,6 +246,25 @@
 				8245A0642971A8A6007DAC04 /* HackerEventUITestsLaunchTests.swift */,
 			);
 			path = HackerEventUITests;
+			sourceTree = "<group>";
+		};
+		82B66B1929965285002AD30F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				82B66B1529964FED002AD30F /* EventEntity+CoreDataClass.swift */,
+				82B66B1629964FED002AD30F /* EventEntity+CoreDataProperties.swift */,
+				82B66B1229964C62002AD30F /* EventModelDB.xcdatamodeld */,
+				82B66B1C299653D2002AD30F /* CoreDataService.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		82B66B20299656D2002AD30F /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				82B66B1E299656CC002AD30F /* DataBaseManager.swift */,
+			);
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 		82CB986B29759720009FA468 /* Routing */ = {
@@ -394,8 +431,12 @@
 			files = (
 				82D269942972BDDF00DB8F08 /* URLSessionHTTPClient.swift in Sources */,
 				8230A587297555EA0007C390 /* AbstractCell.swift in Sources */,
+				82B66B1429964C62002AD30F /* EventModelDB.xcdatamodeld in Sources */,
+				82B66B1B299652E1002AD30F /* DBServiceProtocol.swift in Sources */,
+				82B66B1F299656CC002AD30F /* DataBaseManager.swift in Sources */,
 				82D2699D2972C23500DB8F08 /* Event.swift in Sources */,
 				82D49B922973F88700AEA17B /* EventApiServiceProtocol.swift in Sources */,
+				82B66B1729964FED002AD30F /* EventEntity+CoreDataClass.swift in Sources */,
 				82C31DF32971B72D0049B116 /* EventListViewController.swift in Sources */,
 				82D269952972BDDF00DB8F08 /* NetworkingServiceError.swift in Sources */,
 				82C31DEA2971ACBD0049B116 /* Appdependencies.swift in Sources */,
@@ -404,11 +445,14 @@
 				82CB986729755E89009FA468 /* EventCellTableViewCell.swift in Sources */,
 				82C31DF02971AE870049B116 /* MainTabBarController.swift in Sources */,
 				82D49B902973F80D00AEA17B /* EventListViewControllerViewModel.swift in Sources */,
+				82B66B1829964FED002AD30F /* EventEntity+CoreDataProperties.swift in Sources */,
+				82B66B1D299653D2002AD30F /* CoreDataService.swift in Sources */,
 				82CB987029759905009FA468 /* EventDetailViewController.swift in Sources */,
 				82D49B962973FD1600AEA17B /* EventManagerProtocol.swift in Sources */,
 				82D269962972BDDF00DB8F08 /* HTTPClient.swift in Sources */,
 				8230A58D297556DC0007C390 /* EventCellViewModel.swift in Sources */,
 				82CB986D2975981D009FA468 /* EventListRouter.swift in Sources */,
+				82B66B0E29964513002AD30F /* EventDetailViewControllerViewModel.swift in Sources */,
 				8245A0422971A8A4007DAC04 /* AppDelegate.swift in Sources */,
 				82D269932972BDDF00DB8F08 /* GenericDecoder.swift in Sources */,
 				8245A0442971A8A4007DAC04 /* SceneDelegate.swift in Sources */,
@@ -746,6 +790,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		82B66B1229964C62002AD30F /* EventModelDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				82B66B1329964C62002AD30F /* EventModelDB.xcdatamodel */,
+			);
+			currentVersion = 82B66B1329964C62002AD30F /* EventModelDB.xcdatamodel */;
+			path = EventModelDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8245A0362971A8A4007DAC04 /* Project object */;
 }
