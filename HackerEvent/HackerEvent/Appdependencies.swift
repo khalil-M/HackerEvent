@@ -88,8 +88,9 @@ class AppDependencies {
         return navigationController
     }
     
-    func makeDetailEventViewController() -> UIViewController {
-        let viewController = EventDetailViewController()
+    func makeDetailEventViewController(for event: Event) -> UIViewController {
+        let viewModel = EventDetailViewControllerViewModel(event: event)
+        let viewController = EventDetailViewController(viewModel: viewModel)
         return viewController
     }
 
