@@ -13,7 +13,7 @@ class EventListRouter: EventListRouting {
     var navigationController: UINavigationController?
     
     func routeToEventDetails(for event: Event) {
-        let vc = AppDependencies.shared.makeDetailEventViewController()
+        let vc = AppDependencies.shared.makeDetailEventViewController(for: event)
         vc.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(vc, animated: true)
     }
