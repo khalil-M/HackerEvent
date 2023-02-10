@@ -11,6 +11,7 @@ class EventDetailViewControllerViewModel {
     
     let event: Event
     var dataManager: DataManagerProtocol
+    var events: [Event] = []
     
     init(event: Event, dataManager: DataManagerProtocol = DataManager.shared) {
         self.event = event
@@ -19,7 +20,12 @@ class EventDetailViewControllerViewModel {
 
     
     func saveEvent(title: String) {
-        dataManager.addEvent(name: title)
+        dataManager.saveEvent(name: title)
+    }
+    
+    func retrieveEventsFromDB() {
+        events = dataManager.retrieveEvents()
+        print(events)
     }
     
 }

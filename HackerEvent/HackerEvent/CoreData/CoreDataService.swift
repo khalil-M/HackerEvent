@@ -36,12 +36,8 @@ class CoreDataService: DBServiceProtocol {
         }
     }
     
-    func retrieve<T: NSManagedObject>(_ objectType: T.Type, predicate: NSPredicate? = nil, limit: Int? = nil) -> Result<[T], Error> {
+    func retrieve<T: NSManagedObject>(_ objectType: T.Type) -> Result<[T], Error> {
         let request = objectType.fetchRequest()
-        request.predicate = predicate
-        if let limit = limit {
-            request.fetchLimit = limit
-        }
         do {
             let result = try context.fetch(request)
             return .success(result as? [T] ?? [])
@@ -86,4 +82,29 @@ class CoreDataService: DBServiceProtocol {
             }
         }
     }
+    
+    func fetchEventsFromDB<T: NSManagedObject>(_ objectType: T.Type) -> Result<[NSManagedObject], Error> {
+        let request = objectType.fetchRequest()
+        request.fetchLimit = 1
+        do {
+            let result = (try context.fetch(request) as? [ObjectType])!
+            return .success((result))
+        } catch {
+            return .failure(error)
+        }
+    }
+    
+    
+//    func getAllOverviewCategories() -> [PFOverviewItem] {
+//        let context = self.persistentContainer.viewContext
+//        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "PFOverviewItem")
+//        do {
+//            let requestResult = try context.fetch(request) as? [PFOverviewItem]
+//            return requestResult!
+//        } catch {
+//            print("Failed to fetch contents: \(error)")
+//            // fatalError("Failed to fetch chapters: \(error)")
+//        }
+//        return []
+//    }
 }
