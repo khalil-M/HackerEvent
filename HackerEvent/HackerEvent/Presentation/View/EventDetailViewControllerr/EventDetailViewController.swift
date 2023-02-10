@@ -50,6 +50,7 @@ class EventDetailViewController: UIViewController {
     }
   
     @IBAction func saveEventButton(_ sender: Any) {
-        
+        let event = viewModel.event
+        viewModel.saveEvent(title: event.name)
     }
 }

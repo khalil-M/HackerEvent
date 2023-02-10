@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import CoreData
+
 class AppDependencies {
     var window: UIWindow?
     
@@ -27,6 +29,16 @@ class AppDependencies {
     }()
     
     static let shared = AppDependencies()
+    
+    lazy var persistentContainer: NSPersistentCloudKitContainer = {
+        let container = NSPersistentCloudKitContainer(name: "EventEntity")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
     
     public func setScene(_ scene: UIScene) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -89,7 +101,8 @@ class AppDependencies {
     }
     
     func makeDetailEventViewController(for event: Event) -> UIViewController {
-        let viewModel = EventDetailViewControllerViewModel(event: event)
+        let dataManager: DataManagerProtocol = DataManager.shared
+        let viewModel = EventDetailViewControllerViewModel(event: event, dataManager: dataManager)
         let viewController = EventDetailViewController(viewModel: viewModel)
         return viewController
     }

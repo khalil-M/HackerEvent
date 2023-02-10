@@ -10,9 +10,16 @@ import Foundation
 class EventDetailViewControllerViewModel {
     
     let event: Event
+    var dataManager: DataManagerProtocol
     
-    init(event: Event) {
+    init(event: Event, dataManager: DataManagerProtocol = DataManager.shared) {
         self.event = event
+        self.dataManager = dataManager
+    }
+
+    
+    func saveEvent(title: String) {
+        dataManager.addEvent(name: title)
     }
     
 }
