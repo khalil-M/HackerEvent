@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class EventDetailViewControllerViewModel {
+    
+    let event: Event
+    
+    init(event: Event) {
+        self.event = event
+    }
+    
+}
