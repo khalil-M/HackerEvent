@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="EventEntity" representedClassName="EventEntity" syncable="YES">
+    <entity name="EventEntity" representedClassName=".EventEntity" syncable="YES">
         <attribute name="duration" optional="YES" attributeType="String"/>
         <attribute name="endTime" optional="YES" attributeType="String"/>
         <attribute name="in_24_hours" optional="YES" attributeType="String"/>

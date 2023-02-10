@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWE-9g-NeE">
-                    <rect key="frame" x="0.0" y="233" width="393" height="580"/>
+                    <rect key="frame" x="0.0" y="223" width="393" height="590"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Event 1034" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhu-PT-Rbq">
                             <rect key="frame" x="29" y="22" width="316" height="24"/>
@@ -60,6 +60,7 @@
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="r0g-Ax-xiC" firstAttribute="top" secondItem="tWE-9g-NeE" secondAttribute="top" constant="27" id="BW9-g9-fb8"/>
                         <constraint firstItem="Hzg-7r-qFW" firstAttribute="top" secondItem="bhu-PT-Rbq" secondAttribute="bottom" constant="66.329999999999998" id="KMu-Y2-uUV"/>
@@ -74,46 +75,59 @@
                         <constraint firstAttribute="trailing" secondItem="r0g-Ax-xiC" secondAttribute="trailing" constant="16" id="u1h-cf-7L0"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zu-Me-Q2Z">
-                    <rect key="frame" x="10" y="59" width="30" height="30"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5b-qa-Tpg">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="223"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUr-m2-e42">
+                            <rect key="frame" x="20" y="133" width="108" height="23"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From 22.08.2020 to 21.05.2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYj-X5-OXs">
+                            <rect key="frame" x="25.999999999999986" y="164" width="237.66666666666663" height="20.333333333333343"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zu-Me-Q2Z">
+                            <rect key="frame" x="20" y="90" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="QbZ-H5-xgI"/>
+                                <constraint firstAttribute="height" constant="20" id="WnP-bz-sXc"/>
+                            </constraints>
+                            <state key="normal" title="Button" backgroundImage="BackButton"/>
+                            <buttonConfiguration key="configuration" style="plain" image="BackButton"/>
+                            <connections>
+                                <action selector="backbutton:" destination="-1" eventType="touchUpInside" id="rYn-qr-Sd9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.35294117650000001" green="0.33333333329999998" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="30" id="U4q-AH-qiK"/>
-                        <constraint firstAttribute="height" constant="30" id="iaJ-Ea-Iud"/>
+                        <constraint firstAttribute="bottom" secondItem="bYj-X5-OXs" secondAttribute="bottom" constant="38.670000000000002" id="2hH-bU-4Gl"/>
+                        <constraint firstItem="rUr-m2-e42" firstAttribute="leading" secondItem="S5b-qa-Tpg" secondAttribute="leading" constant="20" symbolic="YES" id="Ckl-Sx-u8n"/>
+                        <constraint firstItem="rUr-m2-e42" firstAttribute="top" secondItem="0zu-Me-Q2Z" secondAttribute="bottom" constant="23" id="ENj-Co-4Cy"/>
+                        <constraint firstItem="bYj-X5-OXs" firstAttribute="leading" secondItem="S5b-qa-Tpg" secondAttribute="leading" constant="26" id="J1l-i2-FYm"/>
+                        <constraint firstItem="0zu-Me-Q2Z" firstAttribute="top" secondItem="S5b-qa-Tpg" secondAttribute="top" constant="90" id="Kp6-aw-nrr"/>
+                        <constraint firstItem="bYj-X5-OXs" firstAttribute="top" secondItem="rUr-m2-e42" secondAttribute="bottom" constant="8" symbolic="YES" id="QLu-Dz-fsq"/>
+                        <constraint firstItem="0zu-Me-Q2Z" firstAttribute="leading" secondItem="S5b-qa-Tpg" secondAttribute="leading" constant="20" symbolic="YES" id="Tbf-bC-IpD"/>
+                        <constraint firstItem="bYj-X5-OXs" firstAttribute="top" secondItem="rUr-m2-e42" secondAttribute="bottom" constant="8" symbolic="YES" id="r5I-qr-JbB"/>
                     </constraints>
-                    <state key="normal" title="Button" backgroundImage="BackButton"/>
-                    <buttonConfiguration key="configuration" style="plain" image="BackButton"/>
-                    <connections>
-                        <action selector="backbutton:" destination="-1" eventType="touchUpInside" id="rYn-qr-Sd9"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUr-m2-e42">
-                    <rect key="frame" x="16" y="135" width="108" height="23"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From 22.08.2020 to 21.05.2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYj-X5-OXs">
-                    <rect key="frame" x="15.999999999999986" y="166" width="237.66666666666663" height="20.333333333333343"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.3529411764705882" green="0.33333333333333331" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tWE-9g-NeE" secondAttribute="bottom" constant="5" id="3kP-9j-MDb"/>
-                <constraint firstItem="rUr-m2-e42" firstAttribute="top" secondItem="0zu-Me-Q2Z" secondAttribute="bottom" constant="46" id="L4e-Zw-llA"/>
-                <constraint firstItem="bYj-X5-OXs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="OWh-eG-adf"/>
+                <constraint firstItem="S5b-qa-Tpg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9sM-zD-hA4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tWE-9g-NeE" secondAttribute="trailing" id="TJK-CY-NlA"/>
-                <constraint firstItem="tWE-9g-NeE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="174" id="bYN-LA-Iqh"/>
-                <constraint firstItem="0zu-Me-Q2Z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="gFb-Gc-mRV"/>
-                <constraint firstItem="bYj-X5-OXs" firstAttribute="top" secondItem="rUr-m2-e42" secondAttribute="bottom" constant="8" symbolic="YES" id="izl-17-DZr"/>
-                <constraint firstItem="0zu-Me-Q2Z" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="kWv-Ln-2tB"/>
+                <constraint firstItem="tWE-9g-NeE" firstAttribute="top" secondItem="S5b-qa-Tpg" secondAttribute="bottom" id="VCr-RZ-J4X"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="S5b-qa-Tpg" secondAttribute="trailing" id="ai4-iP-riD"/>
                 <constraint firstItem="tWE-9g-NeE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nnG-yb-yEp"/>
-                <constraint firstItem="rUr-m2-e42" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="tV3-ca-anK"/>
+                <constraint firstItem="S5b-qa-Tpg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nse-hj-1fE"/>
             </constraints>
-            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+            <point key="canvasLocation" x="-44" y="1"/>
         </view>
     </objects>
     <resources>
@@ -121,6 +135,9 @@
         <image name="EventLogo" width="295" height="295"/>
         <image name="GreenDot" width="11" height="11"/>
         <image name="SaveButton" width="350" height="58"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

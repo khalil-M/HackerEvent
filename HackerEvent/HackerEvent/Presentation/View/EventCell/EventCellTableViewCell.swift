@@ -8,6 +8,10 @@
 import UIKit
 
 class EventCellTableViewCell: UITableViewCell, CellProtocol {
+    func testBuildOnCi() {
+        
+    }
+    
     
 
     @IBOutlet var eventNameLabel: UILabel!
