@@ -8,15 +8,15 @@
 import Foundation
 
 protocol DataManagerProtocol {
-    func retrieveEvents() -> [Event]
-    func saveEvent(name: String)
+    func retrieveEvents(includingCompleted: Bool) -> [Event]
+    func addEvent(name: String)
 }
 
-//extension DataManagerProtocol {
-//    func retrieveTodos(includingCompleted: Bool = false) -> [Event] {
-//        retrieveTodos(includingCompleted: includingCompleted)
-//    }
-//}
+extension DataManagerProtocol {
+    func retrieveTodos(includingCompleted: Bool = false) -> [Event] {
+        retrieveTodos(includingCompleted: includingCompleted)
+    }
+}
 
 class DataManager {
     static let shared: DataManagerProtocol = DataManager()
@@ -41,8 +41,9 @@ class DataManager {
 
 extension DataManager: DataManagerProtocol {
     
-    func retrieveEvents() -> [Event] {
-        let result: Result<[EventEntity], Error> = dbService.retrieve(EventEntity.self)
+    func retrieveEvents(includingCompleted: Bool) -> [Event] {
+        let predicate = includingCompleted ? nil : NSPredicate(format: "isCompletd == false")
+        let result: Result<[EventEntity], Error> = dbService.retrieve(EventEntity.self, predicate: predicate)
         switch result {
         case .success(let eventEntities):
             return eventEntities.map { $0.convertToEvent()}
@@ -51,7 +52,7 @@ extension DataManager: DataManagerProtocol {
         }
     }
     
-    func saveEvent(name: String) {
+    func addEvent(name: String) {
         let entity = EventEntity.entity()
         let newEvent = EventEntity(entity: entity, insertInto: dbService.context)
         newEvent.name = name

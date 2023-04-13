@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-//@objc(EventEntity)
+@objc(EventEntity)
 extension EventEntity {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<EventEntity> {
@@ -28,7 +28,7 @@ extension EventEntity {
 
 extension EventEntity : Identifiable {
     func convertToEvent() -> Event {
-        Event(name: name!, url: url ?? "", start_time: startTime ?? "", end_time: endTime ?? "", duration: duration ?? "", site: site ?? "", in_24_hours: in_24_hours ?? "", status: status ?? "")
+        Event(name: name!, url: url!, start_time: startTime!, end_time: endTime!, duration: duration!, site: site!, in_24_hours: in_24_hours!, status: status!)
     }
 
 }

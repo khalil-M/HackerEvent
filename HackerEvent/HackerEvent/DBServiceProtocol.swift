@@ -14,15 +14,14 @@ public protocol DBServiceProtocol {
     
     func create(_ object: ObjectType)
     func retrieveFirst(_ objectType: ObjectType.Type, predicate: PredicateType?) -> Result<ObjectType?, Error>
-    func retrieve(_ objectType: ObjectType.Type) -> Result<[ObjectType], Error>
+    func retrieve(_ objectType: ObjectType.Type, predicate: PredicateType?, limit: Int?) -> Result<[ObjectType], Error>
     func update(_ object: ObjectType)
     func delete(_ object: ObjectType)
-    func fetchEventsFromDB(_ objectType: ObjectType.Type) -> Result<[ObjectType], Error>
 }
 
 public extension DBServiceProtocol {
-    func retrieve(_ objectType: ObjectType.Type) -> Result<[ObjectType], Error> {
-        return retrieve(objectType)
+    func retrieve(_ objectType: ObjectType.Type, predicate: PredicateType? = nil, limit: Int? = nil) -> Result<[ObjectType], Error> {
+        return retrieve(objectType, predicate: predicate, limit: limit)
     }
 }
 

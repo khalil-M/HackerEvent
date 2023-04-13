@@ -31,7 +31,6 @@ class EventDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         populateUI()
-        viewModel.retrieveEventsFromDB()
         self.navigationItem.setHidesBackButton(true, animated: true)
         backgroundView.layer.cornerRadius = 20
         backgroundView.layer.masksToBounds = true
